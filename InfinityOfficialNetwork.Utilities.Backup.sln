@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfinityOfficialNetwork.Utilities.Backup", "InfinityOfficialNetwork.Utilities.Backup\InfinityOfficialNetwork.Utilities.Backup.csproj", "{6C19137C-8D96-474F-AAE1-44A2B72AB755}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InfinityOfficialNetwork.Utilities.Backup.Native", "InfinityOfficialNetwork.Utilities.Backup.Native\InfinityOfficialNetwork.Utilities.Backup.Native.vcxproj", "{4AF120E9-EA13-BB11-447E-7D7DE61A4E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfinityOfficialNetwork.Utilities.Backup.Shared", "InfinityOfficialNetwork.Utilities.Backup.Shared\InfinityOfficialNetwork.Utilities.Backup.Shared.csproj", "{1E921EE2-814D-41D5-AA6E-B88458F9FC09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C19137C-8D96-474F-AAE1-44A2B72AB755}.Debug|x64.ActiveCfg = Debug|x64
+		{6C19137C-8D96-474F-AAE1-44A2B72AB755}.Debug|x64.Build.0 = Debug|x64
+		{6C19137C-8D96-474F-AAE1-44A2B72AB755}.Debug|x86.ActiveCfg = Debug|x86
+		{6C19137C-8D96-474F-AAE1-44A2B72AB755}.Debug|x86.Build.0 = Debug|x86
+		{6C19137C-8D96-474F-AAE1-44A2B72AB755}.Release|x64.ActiveCfg = Release|x64
+		{6C19137C-8D96-474F-AAE1-44A2B72AB755}.Release|x64.Build.0 = Release|x64
+		{6C19137C-8D96-474F-AAE1-44A2B72AB755}.Release|x86.ActiveCfg = Release|x86
+		{6C19137C-8D96-474F-AAE1-44A2B72AB755}.Release|x86.Build.0 = Release|x86
+		{4AF120E9-EA13-BB11-447E-7D7DE61A4E06}.Debug|x64.ActiveCfg = Debug|x64
+		{4AF120E9-EA13-BB11-447E-7D7DE61A4E06}.Debug|x64.Build.0 = Debug|x64
+		{4AF120E9-EA13-BB11-447E-7D7DE61A4E06}.Debug|x86.ActiveCfg = Debug|Win32
+		{4AF120E9-EA13-BB11-447E-7D7DE61A4E06}.Debug|x86.Build.0 = Debug|Win32
+		{4AF120E9-EA13-BB11-447E-7D7DE61A4E06}.Release|x64.ActiveCfg = Release|x64
+		{4AF120E9-EA13-BB11-447E-7D7DE61A4E06}.Release|x64.Build.0 = Release|x64
+		{4AF120E9-EA13-BB11-447E-7D7DE61A4E06}.Release|x86.ActiveCfg = Release|Win32
+		{4AF120E9-EA13-BB11-447E-7D7DE61A4E06}.Release|x86.Build.0 = Release|Win32
+		{1E921EE2-814D-41D5-AA6E-B88458F9FC09}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1E921EE2-814D-41D5-AA6E-B88458F9FC09}.Debug|x64.Build.0 = Debug|Any CPU
+		{1E921EE2-814D-41D5-AA6E-B88458F9FC09}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1E921EE2-814D-41D5-AA6E-B88458F9FC09}.Debug|x86.Build.0 = Debug|Any CPU
+		{1E921EE2-814D-41D5-AA6E-B88458F9FC09}.Release|x64.ActiveCfg = Release|Any CPU
+		{1E921EE2-814D-41D5-AA6E-B88458F9FC09}.Release|x64.Build.0 = Release|Any CPU
+		{1E921EE2-814D-41D5-AA6E-B88458F9FC09}.Release|x86.ActiveCfg = Release|Any CPU
+		{1E921EE2-814D-41D5-AA6E-B88458F9FC09}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {375E7D4F-D42B-4566-A29A-DB2C4C163FFE}
+	EndGlobalSection
+EndGlobal

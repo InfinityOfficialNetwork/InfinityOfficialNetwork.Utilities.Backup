@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "InfinityOfficialNetwork.Utilities.Backup": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
