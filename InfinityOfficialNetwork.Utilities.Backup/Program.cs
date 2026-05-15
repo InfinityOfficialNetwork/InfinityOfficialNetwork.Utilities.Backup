@@ -1,4 +1,5 @@
 ﻿using InfinityOfficialNetwork.Utilities.Backup.Native;
+using InfinityOfficialNetwork.Utilities.Backup.Services.Database;
 using InfinityOfficialNetwork.Utilities.Backup.Shared.Database.UsnJournal;
 using Microsoft.Extensions.Logging;
 
@@ -19,7 +20,11 @@ internal class Program
                     options.SingleLine = true; // Optional: makes output cleaner
                     options.TimestampFormat = "HH:mm:ss "; // Optional: adds time
                 })
-                .SetMinimumLevel(LogLevel.Debug);
+                .SetMinimumLevel(LogLevel.Debug)
+                .AddFilter("Microsoft.EntityFrameworkCore", LogLevel.Warning)
+#if DEBUG
+                .AddFilter("InfinityOfficialNetwork", LogLevel.Trace);
+#endif
         });
 
         Core.DisposeLoggerFactory = loggerFactory;
@@ -30,7 +35,7 @@ internal class Program
 
         using VssSnapshotSession session = new(logger);
 
-        session.AddVolume("K:\\");
+        session.AddVolume("C:\\");
         await using var snap = await session.CreateSnapshotAsync(CancellationToken.None);
 
         foreach (var property in snap.Snapshots)
@@ -39,7 +44,7 @@ internal class Program
 
             using var reader = h.OpenUsnJournalReader();
 
-            using var ctx = await UsnJournalScratchDbContext.CreateNewDbAsync(DbProvider.Sqlite, "Data Source=\\\\ion-vmhst-0001.infinityofficial.net\\f$\\test\\test.db", loggerFactory);
+            using var ctx = await DynamicDbContextFactory.CreateNewDbContextAsync<UsnJournalScratchDbContext>(DbProvider.Sqlite, "Data Source=\\\\ion-vmhst-0001.infinityofficial.net\\f$\\test\\test.db", loggerFactory);
 
             reader.ExtractAllRecords(ctx);
 
