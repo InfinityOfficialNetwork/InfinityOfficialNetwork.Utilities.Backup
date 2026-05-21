@@ -7,8 +7,12 @@
 #ifndef PCH_H
 #define PCH_H
 
+#define MANAGED_OFF __pragma(managed(push,off))
+#define MANAGED_ON __pragma(managed(push,on))
+#define MANAGED_POP __pragma(managed(pop))
 
 
+#include <WinSock2.h>
 #include <windows.h>
 
 #include <msclr/marshal.h>
@@ -21,7 +25,10 @@
 #include <chrono>
 #include <thread>
 #include <functional>
+#include <string>
 
 
+MANAGED_OFF
+MANAGED_POP
 
 #endif //PCH_H

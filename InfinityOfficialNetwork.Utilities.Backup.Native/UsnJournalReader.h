@@ -1,5 +1,7 @@
 #pragma once
 
+#include "UsnRecord.h"
+
 namespace InfinityOfficialNetwork::Utilities::Backup::Native {
 
 	ref class VssSnapshotVolume;
@@ -10,27 +12,23 @@ namespace InfinityOfficialNetwork::Utilities::Backup::Native {
 		VssSnapshotVolume^ volume;
 		VssSnapshotSession^ session;
 
-    internal:
-        UsnJournalReader(VssSnapshotVolume^ volume, VssSnapshotSession^ session)
-            : volume(volume), session(session)
-        {
-        }
+	internal:
+		UsnJournalReader(VssSnapshotVolume^ volume, VssSnapshotSession^ session)
+			: volume(volume), session(session)
+		{
+		}
 
 	public:
+		System::Collections::Generic::IList<UsnRecord^>^ ExtractAllRecords();
 
+		~UsnJournalReader() {
 
+			System::GC::SuppressFinalize(this);
+		}
 
-
-        void ExtractAllRecords(InfinityOfficialNetwork::Utilities::Backup::Shared::Database::UsnJournal::UsnJournalScratchDbContext^ ctx);
-
-        ~UsnJournalReader() {
-
-            System::GC::SuppressFinalize(this);
-        }
-
-        !UsnJournalReader() {
-            this->~UsnJournalReader();
-        }
+		!UsnJournalReader() {
+			this->~UsnJournalReader();
+		}
 	};
 
 }

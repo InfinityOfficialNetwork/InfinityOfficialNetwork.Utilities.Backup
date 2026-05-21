@@ -6,7 +6,7 @@ namespace InfinityOfficialNetwork::Utilities::Backup::Native {
 
 	ref class VssSnapshotSession;
 	ref class UsnJournalReader;
-
+	ref class FileHandle;
 
 	public ref class VssSnapshotVolume
 	{
@@ -35,6 +35,8 @@ namespace InfinityOfficialNetwork::Utilities::Backup::Native {
 		{
 			delete snapshotHandle;
 		}
+
+		FileHandle^ OpenFileById(System::ValueTuple<System::UInt128, bool> fileId);
 	};
 
 }

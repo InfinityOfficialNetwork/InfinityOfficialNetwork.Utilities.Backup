@@ -1,0 +1,7 @@
+{
+	"dependencies": [
+		"phnt",
+		"sqlitecpp",
+		"boost-asio"
+	]
+}
